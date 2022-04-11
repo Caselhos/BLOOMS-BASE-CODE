@@ -1,5 +1,5 @@
 import pygame
-pygame.init()
+
 import sys, os
 import random
 import time
@@ -16,6 +16,8 @@ from game.coordinate_system import Point
 
 from bot.bot import Bot
 from bot_jenya.bot import Bot as Bot_Jenya
+
+pygame.init()
 
 
 def getComputerResolution():
@@ -48,9 +50,9 @@ def main():
 	bot1 = Bot(redPlayerTurn, boardSize)
 	bot2 = Bot_Jenya(bluePlayerTurn, boardSize)
 
-	redPlayer = Player("red")
+	redPlayer = Player("red", bot1)
 	redPlayer.setName("Player 1")
-	bluePlayer = Player("blue")
+	bluePlayer = Player("blue", bot2)
 	bluePlayer.setName("Player 2")
 	players = {}
 	players[redPlayer.colour] = redPlayer
