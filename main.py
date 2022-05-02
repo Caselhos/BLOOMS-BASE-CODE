@@ -13,7 +13,6 @@ from game_view.game_view import GameView
 
 from game.game import Game, Move, Player
 from game.coordinate_system import Point
-
 from bot.bot import Bot
 from bot_jenya.bot import Bot as Bot_Jenya
 
@@ -31,7 +30,7 @@ def calculateScreenSize(x):
 
 
 def main():
-	screen = pygame.display.set_mode(calculateScreenSize(s.screenSize))
+	#screen = pygame.display.set_mode(calculateScreenSize(s.screenSize))
 
 	images.scale(s.scale)
 	measurer.scale(s.scale)
@@ -59,7 +58,7 @@ def main():
 	players[bluePlayer.colour] = bluePlayer
 
 	game = Game(boardSize, firstPlayer)
-	gameView = GameView(game, screen, players)
+	#gameView = GameView(game, screen, players)
 
 	firstStone = None
 	firstCoords = None
@@ -87,11 +86,11 @@ def main():
 			currentPlayer = players[game.turn]
 			if currentPlayer.isBot():
 				currentPlayer.bot.recieve_move(move.toTuple())
-			gameView.update()
+			#gameView.update()
 
 
 			botJustMadeAMove = True
-
+"""
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				sys.exit()
@@ -141,6 +140,7 @@ def main():
 
 				coords = Point(field.coords.x, field.coords.y)
 
+
 				if firstStone == None:
 					if game.firstStoneIsValid(coords, type):
 						game.placeFirstStone(coords, type)
@@ -166,7 +166,7 @@ def main():
 		gameView.draw()
 
 		pygame.display.flip()
-
+"""
 
 
 

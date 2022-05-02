@@ -12,6 +12,7 @@ class Board:
 			fields = FieldCollection()
 			t = time.time()
 			matrix = createHexagonMatrix(Point(0, 0), size)
+			print(matrix)
 			timer.board_init += (time.time() - t)
 			for coords in matrix:
 				fields.add(Field(coords))
@@ -187,4 +188,3 @@ if __name__ == '__main__':
 	print(board.bloomIsFenced(board.fields.get(0, 2).bloom))
 
 	print(board.blooms)
-	

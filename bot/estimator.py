@@ -224,7 +224,7 @@ class Estimator:
 	def bestMove(self, game):
 		t = time.time()
 		b = self.minimax(game, None, None, 0, True)
-		print("Number of operations: {}\nTime: {}\nCopy time: {}\nEquals time: {}\nBoard init time: {}\nMove is valid time: {}\nPossible moves time: {}\nPre: {}\nPost: {}\nAdd stone to blooms time: {}\nNext turn time: {}\nFields get time: {}\nMake move time: {}\nEstimation time: {}\nBoard copy time: {}\nBoard time: {}\nField init time: {}\nField add: {}\n".format(self.numberOfOperations, time.time() - t, timer.copy, timer.equals, timer.board_init, timer.moveIsValid, timer.possibleMoves, timer.pre, timer.post, timer.addStoneToBlooms, timer.nextTurn, timer.fieldsGet, timer.makeMove, timer.estimationTime, timer.boardCopy, timer.board, timer.fieldInit, timer.fieldAdd))
+		#print("Number of operations: {}\nTime: {}\nCopy time: {}\nEquals time: {}\nBoard init time: {}\nMove is valid time: {}\nPossible moves time: {}\nPre: {}\nPost: {}\nAdd stone to blooms time: {}\nNext turn time: {}\nFields get time: {}\nMake move time: {}\nEstimation time: {}\nBoard copy time: {}\nBoard time: {}\nField init time: {}\nField add: {}\n".format(self.numberOfOperations, time.time() - t, timer.copy, timer.equals, timer.board_init, timer.moveIsValid, timer.possibleMoves, timer.pre, timer.post, timer.addStoneToBlooms, timer.nextTurn, timer.fieldsGet, timer.makeMove, timer.estimationTime, timer.boardCopy, timer.board, timer.fieldInit, timer.fieldAdd))
 		timer.copy = 0
 		timer.equals = 0
 		self.numberOfOperations = 0
