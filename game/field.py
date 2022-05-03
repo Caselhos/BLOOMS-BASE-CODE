@@ -50,6 +50,10 @@ class FieldCollection:
 
 		return self.fields.get((x, y))
 
+	ef
+	getallfieldstest
+
+	d
 	def getAdjacentFields(self, field):
 		if field.adjFields:
 			return field.adjFields
