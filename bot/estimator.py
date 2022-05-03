@@ -149,6 +149,7 @@ class Estimator:
 		theMove = None
 		t = time.time()
 		fields = game.board.fields.get()
+		# print(fields)
 		timer.fieldsGet += (time.time() - t)
 		N = 33
 		n = 0

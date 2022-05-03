@@ -79,7 +79,6 @@ class FieldCollection:
 
 
 	def __repr__(self):
-		print(fields)
 		return "Field Collection of {}".format(self.get())
 
 

@@ -27,5 +27,5 @@ def createHexagonMatrix(centralPoint, size):
 
 if __name__ == '__main__':
 	matrix = createHexagonMatrix(Point(0, 0), 2)
-	print(matrix) 
-	print(len(matrix))
+	# print(matrix)
+	# print(len(matrix))

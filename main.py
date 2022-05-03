@@ -1,3 +1,5 @@
+
+
 import pygame
 
 import sys, os
@@ -16,9 +18,9 @@ from game.coordinate_system import Point
 from bot.bot import Bot
 from bot_jenya.bot import Bot as Bot_Jenya
 
-pygame.init()
+#pygame.init()
 
-
+"""
 def getComputerResolution():
 	infoObject = pygame.display.Info()
 	return (infoObject.current_w, infoObject.current_h)
@@ -28,12 +30,12 @@ def calculateScreenSize(x):
 	os.environ['SDL_VIDEO_WINDOW_POS'] = '%d,%d' % (int(((1 - x) / 2) * w), int(((1 - x) / 2) * h))
 	return (int(w * x), int(h * x))
 
-
+"""
 def main():
 	#screen = pygame.display.set_mode(calculateScreenSize(s.screenSize))
 
-	images.scale(s.scale)
-	measurer.scale(s.scale)
+	#images.scale(s.scale)
+	#measurer.scale(s.scale)
 
 	boardSize = s.boardSize
 
@@ -82,6 +84,8 @@ def main():
 			if not game.moveIsValid(move):
 				move = Move((), ())
 
+			fields3 = list(game.board.fields.get())
+			print(fields3)
 			game.makeMove(move)
 			currentPlayer = players[game.turn]
 			if currentPlayer.isBot():
