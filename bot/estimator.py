@@ -66,7 +66,6 @@ class Estimator:
 			else:
 				lonelyFields.append(field)
 
-
 		if not hollowFields and lonelyFields:
 			hollowFields.append(lonelyFields[0])
 

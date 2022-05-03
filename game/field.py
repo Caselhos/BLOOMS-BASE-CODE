@@ -41,19 +41,19 @@ class FieldCollection:
 		t = time.time()
 		self.fields[field.coords.toTuple()] = field
 		timer.fieldAdd += (time.time() - t)
+
 	def get(self, x=None, y=None):
+
 		def getAllFields(fields):
 			return fields.values()
 
 		if x == None and y == None:
-			return getAllFields(self.fields)
 
+			return getAllFields(self.fields)
 		return self.fields.get((x, y))
 
-	ef
-	getallfieldstest
 
-	d
+
 	def getAdjacentFields(self, field):
 		if field.adjFields:
 			return field.adjFields
@@ -79,6 +79,7 @@ class FieldCollection:
 
 
 	def __repr__(self):
+		print(fields)
 		return "Field Collection of {}".format(self.get())
 
 
